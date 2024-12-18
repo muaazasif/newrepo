@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+/* Add this in your global CSS or a specific component CSS file */
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+.animate-slideInUp {
+  animation: slideInUp 1s ease-out forwards;
+}
+/* Add this in your global CSS or a specific component CSS file */
+
+/* Keyframes for the fade-in and slide-up animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px); /* Starts above */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Ends at the original position */
+  }
+}
+
+/* Applying the animation */
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards; /* Runs the animation once */
+}
+/* Add this in your global CSS or a specific component CSS file */
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+.animate-slideInUp {
+  animation: slideInUp 1s ease-out forwards;
+}
+/* Add this in your global CSS or a specific component CSS file */
+
+/* Keyframes for one-time slide-up and fade-in animation */
+@keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End at the original position */
+  }
+}
+
+/* Class for animation */
+.animate-slideInUp {
+  animation: slideInUp 1s ease-out forwards; /* 1s duration, easing out */
+}
+/* Add this to your global CSS file or in your Tailwind CSS config if you want to customize further */
+
+/* Tailwind's built-in pulse animation already works well for continuous animations */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1); /* Slightly increase the size */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Reset to original size */
+  }
+}
+
+.animate-pulse {
+  animation: pulse 1.5s ease-in-out infinite; /* Repeat the pulse animation indefinitely */
+}
